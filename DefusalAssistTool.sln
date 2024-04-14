@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefusalAssistTool", "DefusalAssistTool.csproj", "{EA84BADC-B86D-4F5C-A95B-A4CC1EF5C204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA84BADC-B86D-4F5C-A95B-A4CC1EF5C204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA84BADC-B86D-4F5C-A95B-A4CC1EF5C204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA84BADC-B86D-4F5C-A95B-A4CC1EF5C204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA84BADC-B86D-4F5C-A95B-A4CC1EF5C204}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {643691A4-6611-425E-976A-99E4234032B9}
+	EndGlobalSection
+EndGlobal
