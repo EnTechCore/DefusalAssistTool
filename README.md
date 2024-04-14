@@ -1,5 +1,5 @@
 # DefusalAssistantTool
-A tool to assist in playing the game "Defusal" on Roblox. Built with .NET 8 and hopes and dreams.  
+A tool to assist in playing the game "Defusal" on Roblox ([https://www.roblox.com/games/3577061261/Defuse](https://www.roblox.com/games/3577061261/Defuse)). Built with .NET 8 and hopes and dreams.  
 This solution is still in early development, and its accuracy in-game has not been tested.
 
 # Build
