@@ -113,11 +113,11 @@
             // 
             VersionLabel.AutoSize = true;
             VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(264, 172);
+            VersionLabel.Location = new Point(265, 172);
             VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(53, 15);
+            VersionLabel.Size = new Size(52, 15);
             VersionLabel.TabIndex = 58;
-            VersionLabel.Text = "DAT V0.2";
+            VersionLabel.Text = "DAT v0.2";
             // 
             // CreditLabel
             // 

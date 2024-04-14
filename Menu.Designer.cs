@@ -78,11 +78,11 @@
             // 
             VersionLabel.AutoSize = true;
             VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(271, 157);
+            VersionLabel.Location = new Point(272, 157);
             VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(53, 15);
+            VersionLabel.Size = new Size(52, 15);
             VersionLabel.TabIndex = 27;
-            VersionLabel.Text = "DAT V0.2";
+            VersionLabel.Text = "DAT v0.2";
             // 
             // MenuButtonForm
             // 
