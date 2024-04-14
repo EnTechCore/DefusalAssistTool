@@ -36,17 +36,17 @@
             MenuHex = new Button();
             MenuKeypads = new Button();
             MenuBinary = new Button();
-            MenuDisclaimer2 = new Label();
             MenuMaths = new Button();
             MenuColorCode = new Button();
             MenuMultiButtons = new Button();
             ModuleInfo = new Label();
             MenuTiming = new Button();
+            MenuTiles = new Button();
             SuspendLayout();
             // 
             // MenuWires
             // 
-            MenuWires.Location = new Point(216, 99);
+            MenuWires.Location = new Point(309, 41);
             MenuWires.Name = "MenuWires";
             MenuWires.Size = new Size(87, 23);
             MenuWires.TabIndex = 0;
@@ -58,17 +58,17 @@
             // 
             MenuDisclaimer1.AutoSize = true;
             MenuDisclaimer1.ForeColor = SystemColors.ControlText;
-            MenuDisclaimer1.Location = new Point(12, 157);
+            MenuDisclaimer1.Location = new Point(12, 147);
             MenuDisclaimer1.Name = "MenuDisclaimer1";
-            MenuDisclaimer1.Size = new Size(103, 15);
+            MenuDisclaimer1.Size = new Size(210, 15);
             MenuDisclaimer1.TabIndex = 22;
-            MenuDisclaimer1.Text = "Placeholder menu";
+            MenuDisclaimer1.Text = "Placeholder menu :: Subject to change";
             // 
             // CreditLabel
             // 
             CreditLabel.AutoSize = true;
             CreditLabel.ForeColor = Color.Gray;
-            CreditLabel.Location = new Point(247, 172);
+            CreditLabel.Location = new Point(338, 147);
             CreditLabel.Name = "CreditLabel";
             CreditLabel.Size = new Size(77, 15);
             CreditLabel.TabIndex = 23;
@@ -78,11 +78,11 @@
             // 
             VersionLabel.AutoSize = true;
             VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(272, 157);
+            VersionLabel.Location = new Point(354, 132);
             VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(52, 15);
+            VersionLabel.Size = new Size(61, 15);
             VersionLabel.TabIndex = 27;
-            VersionLabel.Text = "DAT v0.2";
+            VersionLabel.Text = "DAT v0.2.1";
             // 
             // MenuButtonForm
             // 
@@ -124,16 +124,6 @@
             MenuBinary.UseVisualStyleBackColor = true;
             MenuBinary.Click += MenuBinary_Click;
             // 
-            // MenuDisclaimer2
-            // 
-            MenuDisclaimer2.AutoSize = true;
-            MenuDisclaimer2.ForeColor = SystemColors.ControlText;
-            MenuDisclaimer2.Location = new Point(12, 172);
-            MenuDisclaimer2.Name = "MenuDisclaimer2";
-            MenuDisclaimer2.Size = new Size(189, 15);
-            MenuDisclaimer2.TabIndex = 32;
-            MenuDisclaimer2.Text = "Not representative of final product";
-            // 
             // MenuMaths
             // 
             MenuMaths.Location = new Point(123, 99);
@@ -168,7 +158,7 @@
             // 
             ModuleInfo.AutoSize = true;
             ModuleInfo.ForeColor = SystemColors.ControlText;
-            ModuleInfo.Location = new Point(41, 9);
+            ModuleInfo.Location = new Point(88, 9);
             ModuleInfo.Name = "ModuleInfo";
             ModuleInfo.Size = new Size(249, 15);
             ModuleInfo.TabIndex = 36;
@@ -176,7 +166,7 @@
             // 
             // MenuTiming
             // 
-            MenuTiming.Location = new Point(216, 70);
+            MenuTiming.Location = new Point(216, 99);
             MenuTiming.Name = "MenuTiming";
             MenuTiming.Size = new Size(87, 23);
             MenuTiming.TabIndex = 37;
@@ -184,17 +174,27 @@
             MenuTiming.UseVisualStyleBackColor = true;
             MenuTiming.Click += MenuTiming_Click;
             // 
+            // MenuTiles
+            // 
+            MenuTiles.Location = new Point(216, 70);
+            MenuTiles.Name = "MenuTiles";
+            MenuTiles.Size = new Size(87, 23);
+            MenuTiles.TabIndex = 38;
+            MenuTiles.Text = "Tiles";
+            MenuTiles.UseVisualStyleBackColor = true;
+            MenuTiles.Click += this.MenuTiles_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 196);
+            ClientSize = new Size(427, 171);
+            Controls.Add(MenuTiles);
             Controls.Add(MenuTiming);
             Controls.Add(ModuleInfo);
             Controls.Add(MenuMultiButtons);
             Controls.Add(MenuColorCode);
             Controls.Add(MenuMaths);
-            Controls.Add(MenuDisclaimer2);
             Controls.Add(MenuBinary);
             Controls.Add(MenuKeypads);
             Controls.Add(MenuHex);
@@ -219,11 +219,11 @@
         private Button MenuHex;
         private Button MenuKeypads;
         private Button MenuBinary;
-        private Label MenuDisclaimer2;
         private Button MenuMaths;
         private Button MenuColorCode;
         private Button MenuMultiButtons;
         private Label ModuleInfo;
         private Button MenuTiming;
+        private Button MenuTiles;
     }
 }

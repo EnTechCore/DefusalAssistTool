@@ -17,7 +17,6 @@ namespace DefusalAssistTool
         bool ValidInput;
         int digit1, digit2, digit3, digit4, digit5, digit6, digit7;
 
-
         public Binary()
         {
             InitializeComponent();
@@ -32,25 +31,22 @@ namespace DefusalAssistTool
             TotalZero = 0;
             TotalOne = 0;
             ValidInput = true;
+            string input = BinaryInput.Text;
 
-            if (BinaryInput.Text.Length != 7)
+            if (input.Length != 7 || (!int.TryParse(input[0].ToString(), out digit1) || !int.TryParse(input[1].ToString(), out digit2) || !int.TryParse(input[2].ToString(), out digit3) || !int.TryParse(input[3].ToString(), out digit4) || !int.TryParse(input[4].ToString(), out digit5) || !int.TryParse(input[5].ToString(), out digit6) || !int.TryParse(input[6].ToString(), out digit7)))
             {
-                ValidInput = false;
+                ValidInput = false; // If length != 7 or any inputs != numbers
             }
             else
             {
-
-                if (!int.TryParse(BinaryInput.Text[0].ToString(), out digit1) || !int.TryParse(BinaryInput.Text[1].ToString(), out digit2) || !int.TryParse(BinaryInput.Text[2].ToString(), out digit3) || !int.TryParse(BinaryInput.Text[3].ToString(), out digit4) || !int.TryParse(BinaryInput.Text[4].ToString(), out digit5) || !int.TryParse(BinaryInput.Text[5].ToString(), out digit6) || !int.TryParse(BinaryInput.Text[6].ToString(), out digit7))
-                {
-                    ValidInput = false; // If any fails, set this
-                }
-                else
-                {
-                    TotalOne = digit1 + digit2 + digit3 + digit4 + digit5 + digit6 + digit7;
-                    TotalZero = 7 - TotalOne;
-                }
+                TotalOne = digit1 + digit2 + digit3 + digit4 + digit5 + digit6 + digit7;
+                TotalZero = 7 - TotalOne;
             }
+            SolutionCheck();
+        }
 
+        private void SolutionCheck()
+        {
             if (ValidInput)
             {
                 if (TotalOne == 0)

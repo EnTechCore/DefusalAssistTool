@@ -33,7 +33,7 @@ namespace Defusal
             // Subscribe to the FormClosed event of the Wires form
             wiresForm.FormClosed += (s, args) => this.Show();
             // Show the Wires form
-            wiresForm.ShowDialog(); // ShowDialog() modal, Show() modal
+            wiresForm.ShowDialog();
         }
 
         private void MenuButton1_Click(object sender, EventArgs e)
@@ -98,6 +98,14 @@ namespace Defusal
             Timing timing = new Timing();
             timing.FormClosed += (s, args) => this.Show();
             timing.ShowDialog();
+        }
+
+        private void MenuTiles_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tiles tiles = new Tiles();
+            tiles.FormClosed += (s, args) => this.Show();
+            tiles.ShowDialog();
         }
     }
 }

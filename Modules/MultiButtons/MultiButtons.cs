@@ -27,15 +27,17 @@ namespace DefusalAssistTool
 
         private void MultiButtonsInput_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(MultiButtonsInput.Text) && MultiButtonsInput.Text.Length == 6 && int.TryParse(MultiButtonsInput.Text, out _))
+            string input = MultiButtonsInput.Text;
+
+            if (!string.IsNullOrEmpty(input) && input.Length == 6 && int.TryParse(input, out _))
             {
                 ValidInput = true;
-                digit1 = int.Parse(MultiButtonsInput.Text[0].ToString());
-                digit2 = int.Parse(MultiButtonsInput.Text[1].ToString());
-                digit3 = int.Parse(MultiButtonsInput.Text[2].ToString());
-                digit4 = int.Parse(MultiButtonsInput.Text[3].ToString());
-                digit5 = int.Parse(MultiButtonsInput.Text[4].ToString());
-                digit6 = int.Parse(MultiButtonsInput.Text[5].ToString());
+                digit1 = int.Parse(input[0].ToString());
+                digit2 = int.Parse(input[1].ToString());
+                digit3 = int.Parse(input[2].ToString());
+                digit4 = int.Parse(input[3].ToString());
+                digit5 = int.Parse(input[4].ToString());
+                digit6 = int.Parse(input[5].ToString());
             }
             else
             {

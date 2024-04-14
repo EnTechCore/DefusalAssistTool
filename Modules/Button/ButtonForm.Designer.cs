@@ -36,7 +36,6 @@
             label4 = new Label();
             ButtonSolution = new Label();
             label9 = new Label();
-            VersionLabel = new Label();
             CreditLabel = new Label();
             SuspendLayout();
             // 
@@ -124,21 +123,11 @@
             label9.Text = "Close the window to go back.";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // VersionLabel
-            // 
-            VersionLabel.AutoSize = true;
-            VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(430, 187);
-            VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(52, 15);
-            VersionLabel.TabIndex = 47;
-            VersionLabel.Text = "DAT v0.2";
-            // 
             // CreditLabel
             // 
             CreditLabel.AutoSize = true;
             CreditLabel.ForeColor = Color.Gray;
-            CreditLabel.Location = new Point(405, 203);
+            CreditLabel.Location = new Point(405, 201);
             CreditLabel.Name = "CreditLabel";
             CreditLabel.Size = new Size(77, 15);
             CreditLabel.TabIndex = 46;
@@ -148,8 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(494, 229);
-            Controls.Add(VersionLabel);
+            ClientSize = new Size(494, 225);
             Controls.Add(CreditLabel);
             Controls.Add(label9);
             Controls.Add(ButtonSolution);
@@ -174,7 +162,6 @@
         private Label label4;
         internal Label ButtonSolution;
         private Label label9;
-        private Label VersionLabel;
         private Label CreditLabel;
     }
 }

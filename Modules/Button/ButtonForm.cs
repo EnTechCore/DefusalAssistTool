@@ -24,29 +24,6 @@ namespace DefusalAssistTool
             this.MaximizeBox = false;
         }
 
-        private void SolutionCheck()
-        {
-            if (ButtonColour == "None" && ButtonWord == "None")
-            {
-                ButtonSolution.Text = "Waiting for input";
-            }
-            else if (ButtonColour == "Blue" && ButtonWord == "Detonate")
-            {
-                ButtonSolution.Text = "Press button ONCE, then\r\nPress DOWN arrow";
-            }
-            else if (ButtonColour == "Red")
-            {
-                ButtonSolution.Text = "Press button TWICE, then\r\nPress DOWN arrow";
-            }
-            else if (ButtonWord == "Abort")
-            {
-                ButtonSolution.Text = "Press button THREE times, then\r\nPress UP arrow";
-            }
-            else if (ButtonColour == "Grey/White")
-            {
-                ButtonSolution.Text = "Press button FOUR times, then\r\nPress UP arrow";
-            }
-        }
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e) // Button colour list
         {
             // Uncheck all other items
@@ -64,22 +41,18 @@ namespace DefusalAssistTool
                 if (e.Index == 0)
                 {
                     ButtonColour = "Blue";
-                    System.Diagnostics.Debug.WriteLine(ButtonColour);
                 }
                 else if (e.Index == 1)
                 {
                     ButtonColour = "Red";
-                    System.Diagnostics.Debug.WriteLine(ButtonColour);
                 }
                 else if (e.Index == 2)
                 {
                     ButtonColour = "Grey/White";
-                    System.Diagnostics.Debug.WriteLine(ButtonColour);
                 }
                 else
                 {
                     ButtonColour = "None";
-                    System.Diagnostics.Debug.WriteLine(ButtonColour);
                 }
             }
             SolutionCheck();
@@ -102,20 +75,41 @@ namespace DefusalAssistTool
                 if (e.Index == 0)
                 {
                     ButtonWord = "Detonate";
-                    System.Diagnostics.Debug.WriteLine(ButtonWord);
                 }
                 else if (e.Index == 1)
                 {
                     ButtonWord = "Abort";
-                    System.Diagnostics.Debug.WriteLine(ButtonWord);
                 }
                 else
                 {
                     ButtonWord = "None";
-                    System.Diagnostics.Debug.WriteLine(ButtonWord);
                 }
             }
             SolutionCheck();
+        }
+
+        private void SolutionCheck()
+        {
+            if (ButtonColour == "None" || ButtonWord == "None")
+            {
+                ButtonSolution.Text = "Waiting for input";
+            }
+            else if (ButtonColour == "Blue" && ButtonWord == "Detonate")
+            {
+                ButtonSolution.Text = "Press button ONCE, then\r\nPress DOWN arrow";
+            }
+            else if (ButtonColour == "Red")
+            {
+                ButtonSolution.Text = "Press button TWICE, then\r\nPress DOWN arrow";
+            }
+            else if (ButtonWord == "Abort")
+            {
+                ButtonSolution.Text = "Press button THREE times, then\r\nPress UP arrow";
+            }
+            else if (ButtonColour == "Grey/White")
+            {
+                ButtonSolution.Text = "Press button FOUR times, then\r\nPress UP arrow";
+            } // Surprisingly enough this does cover all cases
         }
     }
 }

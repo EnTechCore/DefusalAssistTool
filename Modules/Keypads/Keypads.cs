@@ -16,7 +16,7 @@ namespace DefusalAssistTool
         int keypad2 = -1;
         int keypad3 = -1;
         int keypad4 = -1;
-        bool ValidInputs = false;
+        bool ValidInput = false;
         int X;
         int Y;
         int Z;
@@ -29,18 +29,18 @@ namespace DefusalAssistTool
             this.MaximizeBox = false;
         }
 
-        private void SolutionCheck()
+        private void SolutionCheck() // This one in particular is also an absolute mess, enjoy
         {
             if (keypad1 == -1 || keypad2 == -1 || keypad3 == -1 || keypad4 == -1)
             {
                 KeypadsSolution.Text = "Waiting for input";
-                ValidInputs = false;
+                ValidInput = false;
             }
             else
             {
-                ValidInputs = true;
+                ValidInput = true;
             }
-            if (ValidInputs)
+            if (ValidInput)
             {
                 // First step
                 if (keypad1 < 10)

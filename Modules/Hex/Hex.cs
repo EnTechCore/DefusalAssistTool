@@ -12,6 +12,7 @@ namespace DefusalAssistTool
 {
     public partial class Hex : Form
     {
+        bool debug = false;
         public Hex()
         {
             InitializeComponent();
@@ -73,11 +74,14 @@ namespace DefusalAssistTool
                 string decodedString = System.Text.Encoding.UTF8.GetString(bytes);
 
                 // Check if decoded string contains only lowercase letters
-                foreach (char c in decodedString)
+                if (!debug)
                 {
-                    if (!(c >= 'a' && c <= 'z'))
+                    foreach (char c in decodedString)
                     {
-                        return "false"; // Only lowercase letters are used in Defusal
+                        if (!(c >= 'a' && c <= 'z'))
+                        {
+                            return "false"; // Only lowercase letters are used in Defusal
+                        }
                     }
                 }
 
@@ -88,6 +92,19 @@ namespace DefusalAssistTool
                 // Handle exceptions
                 return "ERR: " + ex.Message;
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                debug = true;
+            }
+            else
+            {
+                debug = false;
+            }
+            textBox1_TextChanged(sender, e);
         }
     }
 }

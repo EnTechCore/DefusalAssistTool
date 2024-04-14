@@ -42,7 +42,6 @@
             label11 = new Label();
             KeypadsSolution = new Label();
             label9 = new Label();
-            VersionLabel = new Label();
             CreditLabel = new Label();
             SuspendLayout();
             // 
@@ -62,7 +61,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cascadia Code", 60F);
             label1.ForeColor = Color.Gray;
-            label1.Location = new Point(-1, 141);
+            label1.Location = new Point(-1, 119);
             label1.Name = "label1";
             label1.Size = new Size(92, 106);
             label1.TabIndex = 25;
@@ -71,7 +70,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(104, 166);
+            label2.Location = new Point(104, 144);
             label2.Name = "label2";
             label2.Size = new Size(198, 15);
             label2.TabIndex = 33;
@@ -114,7 +113,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.Gray;
-            label3.Location = new Point(128, 43);
+            label3.Location = new Point(118, 64);
             label3.Name = "label3";
             label3.Size = new Size(20, 15);
             label3.TabIndex = 40;
@@ -124,7 +123,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.Gray;
-            label5.Location = new Point(254, 43);
+            label5.Location = new Point(260, 64);
             label5.Name = "label5";
             label5.Size = new Size(20, 15);
             label5.TabIndex = 41;
@@ -134,7 +133,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = Color.Gray;
-            label6.Location = new Point(128, 127);
+            label6.Location = new Point(118, 104);
             label6.Name = "label6";
             label6.Size = new Size(20, 15);
             label6.TabIndex = 42;
@@ -144,7 +143,7 @@
             // 
             label7.AutoSize = true;
             label7.ForeColor = Color.Gray;
-            label7.Location = new Point(254, 127);
+            label7.Location = new Point(260, 104);
             label7.Name = "label7";
             label7.Size = new Size(20, 15);
             label7.TabIndex = 43;
@@ -153,7 +152,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(144, 28);
+            label11.Location = new Point(144, 35);
             label11.Name = "label11";
             label11.Size = new Size(112, 15);
             label11.TabIndex = 44;
@@ -163,7 +162,7 @@
             // KeypadsSolution
             // 
             KeypadsSolution.Font = new Font("Segoe UI", 18F);
-            KeypadsSolution.Location = new Point(89, 166);
+            KeypadsSolution.Location = new Point(89, 144);
             KeypadsSolution.Name = "KeypadsSolution";
             KeypadsSolution.Size = new Size(234, 70);
             KeypadsSolution.TabIndex = 45;
@@ -180,21 +179,11 @@
             label9.Text = "Close the window to go back.";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // VersionLabel
-            // 
-            VersionLabel.AutoSize = true;
-            VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(289, 227);
-            VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(52, 15);
-            VersionLabel.TabIndex = 48;
-            VersionLabel.Text = "DAT v0.2";
-            // 
             // CreditLabel
             // 
             CreditLabel.AutoSize = true;
             CreditLabel.ForeColor = Color.Gray;
-            CreditLabel.Location = new Point(264, 242);
+            CreditLabel.Location = new Point(264, 205);
             CreditLabel.Name = "CreditLabel";
             CreditLabel.Size = new Size(77, 15);
             CreditLabel.TabIndex = 47;
@@ -204,8 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(353, 266);
-            Controls.Add(VersionLabel);
+            ClientSize = new Size(353, 229);
             Controls.Add(CreditLabel);
             Controls.Add(label9);
             Controls.Add(label2);
@@ -243,7 +231,6 @@
         private Label label11;
         internal Label KeypadsSolution;
         private Label label9;
-        private Label VersionLabel;
         private Label CreditLabel;
     }
 }

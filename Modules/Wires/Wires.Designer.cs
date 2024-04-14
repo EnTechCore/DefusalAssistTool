@@ -42,7 +42,6 @@
             wiresCover = new Panel();
             WiresSolution = new Label();
             label9 = new Label();
-            VersionLabel = new Label();
             CreditLabel = new Label();
             SuspendLayout();
             // 
@@ -189,21 +188,11 @@
             label9.Text = "Close the window to go back.";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // VersionLabel
-            // 
-            VersionLabel.AutoSize = true;
-            VersionLabel.ForeColor = Color.Gray;
-            VersionLabel.Location = new Point(528, 303);
-            VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(52, 15);
-            VersionLabel.TabIndex = 47;
-            VersionLabel.Text = "DAT v0.2";
-            // 
             // CreditLabel
             // 
             CreditLabel.AutoSize = true;
             CreditLabel.ForeColor = Color.Gray;
-            CreditLabel.Location = new Point(503, 318);
+            CreditLabel.Location = new Point(503, 310);
             CreditLabel.Name = "CreditLabel";
             CreditLabel.Size = new Size(77, 15);
             CreditLabel.TabIndex = 46;
@@ -213,8 +202,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(592, 341);
-            Controls.Add(VersionLabel);
+            ClientSize = new Size(592, 334);
             Controls.Add(CreditLabel);
             Controls.Add(lightCover);
             Controls.Add(wiresCover);
@@ -252,7 +240,6 @@
         private Panel wiresCover;
         private Label WiresSolution;
         private Label label9;
-        private Label VersionLabel;
         private Label CreditLabel;
     }
 }

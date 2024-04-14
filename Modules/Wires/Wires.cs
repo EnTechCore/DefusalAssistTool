@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// This one in particular is an absolute mess since this is the one I started this solution on.
+// Good fucking luck understanding this
+
 namespace Defusal
 {
     public partial class Wires : Form
@@ -43,6 +46,10 @@ namespace Defusal
                 else if (BlueWiresPresent)
                 {
                     WiresSolution.Text = "Cut the last wire";
+                }
+                else
+                {
+                    WiresSolution.Text = "Waiting for input"; // Manual does not say "If none of the above apply"; suggests there are no other valid cases. Looks janky asf in operation but should be correct
                 }
             }
             else if (WireCount == 4)
@@ -109,18 +116,14 @@ namespace Defusal
                 if (e.Index == 0)
                 {
                     WireCount = 3;
-                    System.Diagnostics.Debug.WriteLine(WireCount);
                 }
                 else if (e.Index == 1)
                 {
                     WireCount = 4;
-                    System.Diagnostics.Debug.WriteLine(WireCount);
                 }
                 else if (e.Index == 2)
                 {
                     WireCount = 5;
-                    System.Diagnostics.Debug.WriteLine(WireCount);
-                    System.Diagnostics.Debug.WriteLine(LightColour);
                 }
             }
 
@@ -206,22 +209,18 @@ namespace Defusal
                 if (e.Index == 0)
                 {
                     RedWiresPresent = true;
-                    System.Diagnostics.Debug.WriteLine("R " + RedWiresPresent);
                 }
                 else if (e.Index == 1)
                 {
                     GreenWiresPresent = true;
-                    System.Diagnostics.Debug.WriteLine("G " + GreenWiresPresent);
                 }
                 else if (e.Index == 2)
                 {
                     BlueWiresPresent = true;
-                    System.Diagnostics.Debug.WriteLine("B " + BlueWiresPresent);
                 }
                 else if (e.Index == 3)
                 {
                     WhiteWiresPresent = true;
-                    System.Diagnostics.Debug.WriteLine("W " + WhiteWiresPresent);
                 }
             }
             else if (e.NewValue == CheckState.Unchecked)
@@ -229,22 +228,18 @@ namespace Defusal
                 if (e.Index == 0)
                 {
                     RedWiresPresent = false;
-                    System.Diagnostics.Debug.WriteLine("R " + RedWiresPresent);
                 }
                 else if (e.Index == 1)
                 {
                     GreenWiresPresent = false;
-                    System.Diagnostics.Debug.WriteLine("G " + GreenWiresPresent);
                 }
                 else if (e.Index == 2)
                 {
                     BlueWiresPresent = false;
-                    System.Diagnostics.Debug.WriteLine("B " + BlueWiresPresent);
                 }
                 else if (e.Index == 3)
                 {
                     WhiteWiresPresent = false;
-                    System.Diagnostics.Debug.WriteLine("W " + WhiteWiresPresent);
                 }
             }
 
